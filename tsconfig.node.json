@@ -1,7 +1,7 @@
 // This is a base tsconfig.json intended to be used by TypeScript programs targeting Node
 {
   // We extend the recommended tsconfig for Node 16
-  // https://www.npmjs.com/package/@tsconfig/node16
+  // https://github.com/tsconfig/bases/blob/main/bases/node16.json
   "extends": "@tsconfig/node16/tsconfig.json",
 
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
