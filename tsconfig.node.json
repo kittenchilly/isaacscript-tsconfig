@@ -1,14 +1,11 @@
-// This is a base tsconfig.json intended to be used by IsaacScript mods
+// This is a base tsconfig.json intended to be used by TypeScript programs targeting Node
 {
+  // We extend the recommended tsconfig for Node 16
+  // https://www.npmjs.com/package/@tsconfig/node16
+  "extends": "@tsconfig/node16/tsconfig.json",
+
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
-    // Recommended as per TypeScriptToLua
-    // https://typescripttolua.github.io/docs/getting-started/
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "moduleResolution": "Node",
-    "types": ["isaac-typescript-definitions"],
-
     // We want the compiler to be as strict as possible to catch all the things
     // By default, these flags are false
     "strict": true,
@@ -23,5 +20,11 @@
     // We want to always use "lf" to be consistent with all platforms and reduce the file size of
     // the output
     "newLine": "lf",
+
+    // "sourceMap" creates source map files for emitted JavaScript files
+    // By default, it is false
+    // We want to be able to see the TypeScript line numbers in error messages to help with
+    // debugging
+    "sourceMap": true,
   },
 }

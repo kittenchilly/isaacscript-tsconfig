@@ -12,8 +12,7 @@
   },
   "license": "GPL-3.0",
   "author": "Zamiell",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "@tsconfig/node16": "^1.0.1"
   }
 }
