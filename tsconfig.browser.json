@@ -22,5 +22,9 @@
     // We want to be able to see the TypeScript line numbers in error messages to help with
     // debugging
     "sourceMap": true,
+
+    // "lib" specifies a set of bundled library declaration files that describe the target runtime
+    // environment
+    "lib": ["DOM", "ES2017"],
   },
 }
