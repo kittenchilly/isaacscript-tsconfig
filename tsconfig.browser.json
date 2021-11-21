@@ -1,4 +1,4 @@
-// This is a base tsconfig.json intended to be used by IsaacScript mods
+// This is a base tsconfig.json intended to be used by TypeScript programs targeting Node
 {
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
@@ -17,11 +17,10 @@
     // the output
     "newLine": "lf",
 
-    // Recommended as per TypeScriptToLua
-    // https://typescripttolua.github.io/docs/getting-started/
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "moduleResolution": "Node",
-    "types": ["isaac-typescript-definitions"],
+    // "sourceMap" creates source map files for emitted JavaScript files
+    // By default, it is false
+    // We want to be able to see the TypeScript line numbers in error messages to help with
+    // debugging
+    "sourceMap": true,
   },
 }
