@@ -1,4 +1,4 @@
-// This is a base tsconfig.json intended to be used as a base
+// This is a tsconfig.json intended to be used as a base for all TypeScript projects
 {
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
@@ -7,9 +7,9 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
-    "noUnusedParameters": true,
-    // (we prefer the "@typescript-eslint/no-unused-vars" ESLint rule over the "noUnusedLocals"
-    // compiler flag since unused local variables can be useful while debugging)
+    // (we prefer the "@typescript-eslint/no-unused-vars" ESLint rule over the "noUnusedLocals" and
+    // "noUnusedParameters" compiler flags since unused local variables can be useful while
+    // debugging)
 
     // "newLine" specifies the end of line sequence
     // By default, it is "crlf" on Windows

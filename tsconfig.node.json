@@ -1,21 +1,19 @@
 // This is a base tsconfig.json intended to be used by TypeScript programs targeting Node.js
 {
+  // We extend the base IsaacScript config
+  // https://github.com/IsaacScript/isaacscript-tsconfig/blob/main/tsconfig.base.json
+  "extends": "isaacscript-tsconfig/tsconfig.base.json",
+
   // https://www.typescriptlang.org/docs/handbook/compiler-options.html
   "compilerOptions": {
-    // We want the compiler to be as strict as possible to catch all the things
-    // By default, these flags are false
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noUnusedParameters": true,
-    // (we prefer the "@typescript-eslint/no-unused-vars" ESLint rule over the "noUnusedLocals"
-    // compiler flag since unused local variables can be useful while debugging)
-
-    // "newLine" specifies the end of line sequence
-    // By default, it is "crlf" on Windows
-    // We want to always use "lf" to be consistent with all platforms and reduce the file size of
-    // the output
-    "newLine": "lf",
+    // We manually implement the options from the recommended tsconfig for Node 16
+    // (because we can only extend from one config at a time)
+    // https://github.com/tsconfig/bases/blob/main/bases/node16.json
+    "lib": ["es2021"],
+    "module": "commonjs",
+    "target": "es2021",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
 
     // "sourceMap" creates source map files for emitted JavaScript files
     // By default, it is false
@@ -23,8 +21,4 @@
     // debugging
     "sourceMap": true,
   },
-
-  // We extend the recommended tsconfig for Node 16
-  // https://github.com/tsconfig/bases/blob/main/bases/node16.json
-  "extends": "@tsconfig/node16/tsconfig.json",
 }
