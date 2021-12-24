@@ -11,8 +11,5 @@
     "url": "git+https://github.com/Zamiell/isaacscript-tsconfig.git"
   },
   "license": "GPL-3.0",
-  "author": "Zamiell",
-  "dependencies": {
-    "@tsconfig/node16": "^1.0.2"
-  }
+  "author": "Zamiell"
 }
