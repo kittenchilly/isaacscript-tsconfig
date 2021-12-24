@@ -1,6 +1,6 @@
 {
   "name": "isaacscript-tsconfig",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "This is a shared TypeScript configuration file intended to be used in mods that use the [IsaacScript](https://isaacscript.github.io/) framework.",
   "homepage": "https://github.com/Zamiell/isaacscript-tsconfig#readme",
   "bugs": {
